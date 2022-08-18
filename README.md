@@ -4,12 +4,17 @@
 struct tableta {
 	
 	char producator[20];
+	
 	char model[20];
+	
 	int an;
+	
 	float pret;
 
 };
+
 int main() {
+
 	struct tableta a[10];
 	int n = 0;//nr tablete
 	float s = 0;//suma totala a tabletelor
@@ -18,16 +23,19 @@ int main() {
 	f2 = fopen("afisare.txt", "w");
 
 	if (!f1) {
+	
 		printf("Fisierul citire nu exista!");
 		fflush(stdout);
 		return 1;
 	}
 
 	while (fscanf(f1, "%s%s%d%f", a[n].producator, a[n].model, &a[n].an,
-			&a[n].pret) != EOF) {
+			&a[n].pret) != EOF)
+			{
 		printf("Tableta %s  de model  %s fabricata in %d, are pretul %.2f lei\n",
 				a[n].producator, a[n].model, a[n].an, a[n].pret);
 		fflush(stdout);
+		
 		n++;
 	}
 	printf("\n");
