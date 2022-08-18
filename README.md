@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 struct tableta {
+	
 	char producator[20];
 	char model[20];
 	int an;
